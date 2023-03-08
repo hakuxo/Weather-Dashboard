@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-light">
+                <h5 class="mt-1">Search a City!</h5>
+            <div class="input-group mb-3">
+            <input type="text" id="search-city" class="form-control" placeholder="Search a city">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="button" id="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+            <button class="btn btn-warning" type="button" id="clear-history">Clear History</button>
+            <form id="history"></form>
+        </div>
+        <!-- Weather panel categories -->
+    <div class="col-lg-9">
+        <div class="row mr-0">
+            <div class="col-lg-11 card m-3 d-none" id="today-weather">   
+                <div class="card-body">
+                    <h3 id="city-name" class="city-name align-middle"></h3>
+                    <img id="city-pic" alt="picture-of-city">
+                    <p id="temp"></p>
+                    <p id="humidity"></p>
+                    <p id="wind"></p>
+                    <p id="UV"></p>
+                </div>
+            </div>
+        </div>
+        <!-- 5 day forecast -->
+        <div class="row d-none" id="5day-header">
+            <div class="col-12">
+                <h3>5-Day Forecast</h3>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
